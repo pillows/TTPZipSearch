@@ -8,6 +8,17 @@ class City extends Component {
         }
     }
 
+    componentWillMount() {
+
+    }
+
+    componentDidMount() {
+        fetch("http://ctp-zip-api.herokuapp.com/city/:cityname", { method: "GET" })
+            .then(res => res.json())
+            .then(data => this.setState({ data }))
+    }
+
+
     render() {
         return (<div>
 
