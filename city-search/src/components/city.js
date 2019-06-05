@@ -5,26 +5,12 @@ class City extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
-            city: ""
-
+            data: []
         }
         this.setZip = this.setZip.bind(this);
 
     }
 
-    componentWillMount() {
-
-    }
-
-    componentDidMount() {
-    }
-
-    // handleChange = (e) => {
-    //     let input = e.target.value.toUpperCase();
-    //     this.setState({ city: input });
-    //     console.log(input)
-    // }
     setZip() {
         let input = document.getElementById("value").value.toUpperCase();
         this.getZip(input);
@@ -32,32 +18,13 @@ class City extends Component {
     }
 
     getZip = (city) => {
-        console.log("in")
         console.log(this.state.city);
-        // if (this.state.city === "") {
-
-        // }
-        //else {
-        console.log("in")
         fetch(`http://ctp-zip-api.herokuapp.com/city/${city}`, { method: "GET" })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 this.setState({ data })
             }).catch(error => { throw (error) })
-        //}
-
-    }
-
-    // handleSubmit() {
-    //     e.preventDefault()
-    //     this.getZip();
-
-    // }
-
-
-
-    componentDidUpdate() {
 
     }
 
