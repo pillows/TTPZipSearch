@@ -69,7 +69,7 @@ class ZipSearch extends Component {
                     <form onSubmit={this.preventSubmit} >
                       <div className="form-group">
                         <label>Zip Code</label>
-                        <input type="number" className="form-control" id="zip-input"  placeholder="10036" value="10036"/>
+                        <input type="number" className="form-control" id="zip-input"  placeholder="10036"/>
 
                       </div>
 

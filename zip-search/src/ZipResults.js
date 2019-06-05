@@ -16,7 +16,7 @@ class ZipSearch extends Component {
     render(){
         return(
             <div className="card" style={{width:"18rem"}}>
-                <div className="card-header">
+                <div className="card-header text-left">
                 {this.state.title}
                 </div>
                 <ul className="list-unstyled text-left">
