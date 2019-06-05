@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Searchbar from './Searchbar';
 
 class City extends Component {
     constructor(props) {
