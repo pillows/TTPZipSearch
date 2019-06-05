@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import City from './components/City';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          <City />
         </a>
       </header>
     </div>
