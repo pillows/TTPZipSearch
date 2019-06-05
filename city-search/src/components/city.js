@@ -14,18 +14,15 @@ class City extends Component {
     setZip() {
         let input = document.getElementById("value").value.toUpperCase();
         this.getZip(input);
-
     }
 
     getZip = (city) => {
-        console.log(this.state.city);
         fetch(`http://ctp-zip-api.herokuapp.com/city/${city}`, { method: "GET" })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 this.setState({ data })
             }).catch(error => { throw (error) })
-
     }
 
     prevent(e) {
