@@ -13,7 +13,7 @@ class City extends Component {
     }
 
     componentDidMount() {
-        fetch("http://ctp-zip-api.herokuapp.com/city/:cityname", { method: "GET" })
+        fetch("http://ctp-zip-api.herokuapp.com/city/NEWYORK", { method: "GET" })
             .then(res => res.json())
             .then(data => this.setState({ data }))
     }
